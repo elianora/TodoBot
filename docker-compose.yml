@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  todobot:
+    image: ${DOCKER_REGISTRY-}todobot
+    build:
+      context: .
+      dockerfile: TodoBot/Dockerfile

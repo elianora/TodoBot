@@ -28,22 +28,28 @@ public class TodoCommands(IDbContextFactory<TodoDbContext> dbFactory) : Applicat
         });
     }
 
-    [SlashCommand("get-todos", "Retrieves a list of todos for the current user")]
+    [SlashCommand("list-todos", "Retrieves a list of todos for the current user")]
     public async Task GetTodosAsync(InteractionContext context)
     {
-        var response = new StringBuilder();
+        var responseBuilder = new StringBuilder();
         using (var db = dbFactory.CreateDbContext())
         {
             var todos = db.Todos.Where(todo => todo.DiscordUserId == context.User.Id).ToList();
             foreach (var todo in todos)
             {
-                response.AppendLine(todo.Description);
+                responseBuilder.AppendLine($"- {todo.Description}");
             }
+        }
+
+        var response = responseBuilder.ToString();
+        if (string.IsNullOrWhiteSpace(response))
+        {
+            response = "You have no todos!";
         }
 
         await context.CreateResponseAsync(InteractionResponseType.ChannelMessageWithSource, new()
         {
-            Content = response.ToString()
+            Content = response
         });
     }
 }

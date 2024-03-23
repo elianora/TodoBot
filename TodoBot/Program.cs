@@ -6,7 +6,8 @@ using TodoBot.Commands;
 
 var builder = Host.CreateApplicationBuilder(args);
 builder.Services.AddHostedService<Worker>();
-builder.Services.AddDbContext<TodoDbContext>(options => 
+
+builder.Services.AddDbContextFactory<TodoDbContext>(options =>
 {
     options.UseInMemoryDatabase("TodoDb");
 });

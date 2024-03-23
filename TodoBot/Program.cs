@@ -1,10 +1,16 @@
 using DSharpPlus;
 using DSharpPlus.SlashCommands;
+using Microsoft.EntityFrameworkCore;
 using TodoBot;
 using TodoBot.Commands;
 
 var builder = Host.CreateApplicationBuilder(args);
 builder.Services.AddHostedService<Worker>();
+builder.Services.AddDbContext<TodoDbContext>(options => 
+{
+    options.UseInMemoryDatabase("TodoDb");
+});
+
 builder.Services.AddSingleton(serviceProvider =>
 {
     var discordConfig = new DiscordConfiguration

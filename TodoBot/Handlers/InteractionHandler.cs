@@ -1,7 +1,6 @@
 ﻿using DSharpPlus.EventArgs;
 using DSharpPlus;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.VisualBasic;
 
 namespace TodoBot.Handlers;
 

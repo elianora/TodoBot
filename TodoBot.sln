@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34714.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoBot", "TodoBot\TodoBot.csproj", "{72D2F798-D13B-49D1-990D-90B3ED4F9611}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{05ED8C6E-25D8-49BC-8553-7267B43E00D2}"
+	ProjectSection(SolutionItems) = preProject
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{72D2F798-D13B-49D1-990D-90B3ED4F9611}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72D2F798-D13B-49D1-990D-90B3ED4F9611}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72D2F798-D13B-49D1-990D-90B3ED4F9611}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72D2F798-D13B-49D1-990D-90B3ED4F9611}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5A0D1C68-6C56-4D36-980D-BBC965A6C217}
+	EndGlobalSection
+EndGlobal
